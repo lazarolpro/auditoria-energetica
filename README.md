@@ -23,8 +23,17 @@ Sin cuantificarlo en dinero, no hay decisión.
   horario.
 - Estima el **desperdicio** y lo traduce a coste, con recomendaciones.
 
+## Demo visual
+
+![Curva de carga de 7 días y desperdicio](assets/auditoria_demo.gif)
+
+La animación recorre la curva de carga y señala la carga base y la punta. Video
+completo: [`assets/auditoria_demo.mp4`](assets/auditoria_demo.mp4).
+
 ## Evidencia que produce
 
+- `assets/auditoria_demo.mp4`, `auditoria_demo.gif`, `auditoria_demo_poster.png` —
+  demo visual animado (con miniatura).
 - [`assets/muestra_auditoria.pdf`](assets/muestra_auditoria.pdf) — muestra resumida
   del informe de auditoría (con marca de agua).
 - [`load_profile.svg`](load_profile.svg) — perfil de carga (gráfico).
