@@ -1,42 +1,45 @@
-# Capa 6 — Analítica de eficiencia energética
+# Capa 6 — Eficiencia energética
 
-[![CI](https://github.com/lazarolpro/auditoria-energetica/actions/workflows/ci.yml/badge.svg)](https://github.com/lazarolpro/auditoria-energetica/actions/workflows/ci.yml)
 [`lazarolpro/auditoria-energetica`](https://github.com/lazarolpro/auditoria-energetica) · parte del [portafolio de 9 capacidades](https://github.com/lazarolpro/portafolio)
 
-**Capacidad demostrada:** convertir la curva de carga de un medidor en
-indicadores de eficiencia y en un ahorro estimado con acciones concretas.
+**Capacidad demostrada:** convertir la curva de carga de un medidor en KPIs
+accionables y en un ahorro estimado en dinero.
+
+> © 2026 Ronny L. Díaz López. **Todos los derechos reservados.** El código fuente,
+> los datos de detalle y los informes completos son propiedad del autor y no se
+> publican. Prohibida su venta o uso comercial sin autorización escrita. Ver
+> [`LICENSE`](LICENSE).
 
 ## Problema real
 
-El consumo "fuera de horario" y las cargas ociosas se pagan todos los meses sin
-que nadie las vea. Sin analizar la curva de carga, el desperdicio es invisible.
+El consumo se paga todos los meses, pero el desperdicio es invisible: equipos que
+siguen encendidos fuera de horario, cargas ociosas de noche, factor de carga bajo.
+Sin cuantificarlo en dinero, no hay decisión.
 
 ## Qué hace
 
-- Ingestiona la curva de carga de un medidor (intervalos de 15 minutos).
-- Calcula consumo, carga base, demanda punta, **factor de carga** y consumo
-  fuera de horario.
-- Detecta desperdicio y estima el ahorro potencial en kWh y USD.
-- Genera un informe Markdown y un gráfico SVG sin dependencias.
-
-## Cómo ejecutar
-
-```bash
-python energy_audit.py --demo
-python energy_audit.py --input data/meter_15min.csv --out report.md
-python energy_audit.py --json
-python -m pytest -q
-```
+- Analiza la curva de carga de 15 min de un medidor (7 días).
+- Calcula consumo, demanda punta, carga base, factor de carga y consumo fuera de
+  horario.
+- Estima el **desperdicio** y lo traduce a coste, con recomendaciones.
 
 ## Evidencia que produce
 
-- `report.md` — informe con KPIs y recomendaciones.
-- `load_profile.svg` — gráfico de la curva de carga.
-- Pruebas en verde.
+- [`assets/muestra_auditoria.pdf`](assets/muestra_auditoria.pdf) — muestra resumida
+  del informe de auditoría (con marca de agua).
+- [`load_profile.svg`](load_profile.svg) — perfil de carga (gráfico).
+- [`data/meter_15min.csv`](data/meter_15min.csv) — datos de entrada del medidor.
+
+## Alcance de este repositorio
+
+Este repositorio es una **vitrina del resultado**: muestra los KPIs, el gráfico de
+carga y el ahorro estimado. El **código fuente** y los **informes completos** son
+propiedad del autor y se mantienen fuera del repositorio público.
 
 ## Stack
 
-Python 3 (biblioteca estándar). Sin dependencias externas.
+Python 3 (solo biblioteca estándar: `csv`, `datetime`, `statistics`). Sin
+dependencias. *(El código no se publica; ver `LICENSE`.)*
 
 ## Por qué le importa a la empresa
 
