@@ -1,7 +1,7 @@
 # Capa 6 — Analítica de eficiencia energética
 
 [![CI](https://github.com/lazarolpro/auditoria-energetica/actions/workflows/ci.yml/badge.svg)](https://github.com/lazarolpro/auditoria-energetica/actions/workflows/ci.yml)
-[`lazarolpro/auditoria-energetica`](https://github.com/lazarolpro/auditoria-energetica) · parte del [portafolio de 6 capacidades](https://github.com/lazarolpro/portafolio)
+[`lazarolpro/auditoria-energetica`](https://github.com/lazarolpro/auditoria-energetica) · parte del [portafolio de 9 capacidades](https://github.com/lazarolpro/portafolio)
 
 **Capacidad demostrada:** convertir la curva de carga de un medidor en
 indicadores de eficiencia y en un ahorro estimado con acciones concretas.
@@ -42,3 +42,6 @@ Python 3 (biblioteca estándar). Sin dependencias externas.
 
 Responde a **proyectos de eficiencia energética**: identificar el desperdicio,
 cuantificarlo en dinero y proponer acciones medibles.
+
+**En mantenimiento:** detectar consumo anómalo y justificar la reparación o el
+recambio.
